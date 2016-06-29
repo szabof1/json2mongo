@@ -1,0 +1,73 @@
+{
+  "@odata.context": "https://127.0.0.1/api/$metadata#Categories",
+  "value": [
+  {
+    "_id" : "5761202d062fc007943bc40f",
+    "categoryName": "Main category",
+    "children": [
+        {"categoryId": "57612031062fc007943bc411"}
+    ],
+    "parentId": null,
+    "relatedBrands": [],
+    "relatedServices": []
+  },
+  {
+    "_id" : "57612031062fc007943bc411",
+    "categoryName": "Beauty",
+    "children": [],
+    "parentId": "5761202d062fc007943bc40f",
+    "relatedBrands": [{"brandId": "5761149c062fc007943bc3f3"}],
+    "relatedServices": [
+      {"servicesId": "57611fe6062fc007943bc3f9"},
+      {"servicesId": "57611fe9062fc007943bc3fb"}
+    ]
+  },
+  {
+    "_id" : "57612034062fc007943bc413",
+    "categoryName": "Health",
+    "children": [],
+    "parentId": "5761202d062fc007943bc40f",
+    "relatedBrands": [],
+    "relatedServices": []
+  },
+  {
+    "_id" : "5761203b062fc007943bc417",
+    "categoryName": "Fitness",
+    "children": [],
+    "parentId": "57612034062fc007943bc413",
+    "relatedBrands": [],
+    "relatedServices": []
+  },
+  {
+    "_id" : "576a455c062fc029d0270924",
+    "categoryName": "Wellness",
+    "children": [],
+    "parentId": "5761202d062fc007943bc40f",
+    "relatedBrands": [],
+    "relatedServices": []
+  },
+  {
+    "_id" : "576a4407062fc029d027091e",
+    "categoryName": "Maniqure & pediqure",
+    "children": [],
+    "parentId": "57612031062fc007943bc411",
+    "relatedBrands": [],
+    "relatedServices": []
+  },
+  {
+    "_id" : "576a4636062fc029d0270926",
+    "categoryName": "Maniqure",
+    "children": [],
+    "parentId": "576a4407062fc029d027091e",
+    "relatedBrands": [],
+    "relatedServices": []
+  },
+  {
+    "_id" : "576a4bfe062fc029d027092a",
+    "categoryName": "Pediqure",
+    "children": [],
+    "parentId": "576a4407062fc029d027091e",
+    "relatedBrands": [],
+    "relatedServices": []
+  }
+]}

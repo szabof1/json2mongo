@@ -1,0 +1,7 @@
+{ "@odata.context": "https://127.0.0.1/api/$metadata#Partners",
+  "value": [
+  {
+    "_id": "57612f81062fc007943bc419",
+    "partnerName": "Shiny Nails"
+  }
+]}

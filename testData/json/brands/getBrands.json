@@ -1,0 +1,10 @@
+{
+  "@odata.context": "https://127.0.0.1/api/$metadata#Brands",
+  "value": [
+  {
+    "_id": "5761149c062fc007943bc3f3",
+    "brandName": "Brand",
+    "relatedCategories": [{"categoryId": "57612031062fc007943bc411"}],
+    "relatedServices": [{"serviceId": "57611fe6062fc007943bc3f9"}]
+  }
+]}

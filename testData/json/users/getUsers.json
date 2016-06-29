@@ -1,0 +1,58 @@
+{
+  "@odata.context": "https://127.0.0.1/api/$metadata#Users",
+  "value": [
+  {
+    "_id": "57611fe0062fc007943bc3f5",
+    "avatar": "https://pixabay.com/static/uploads/photo/2014/04/03/10/32/user-310807_960_720.png",
+    "userName": "gizi",
+    "isReported": false,
+    "relatedUsers": [
+      {"userId": "57611fe3062fc007943bc3f7"}
+    ],
+    "relatedServices": [{"serviceId": "57611fe6062fc007943bc3f9"}],
+    "relatedComments": []
+  },
+  {
+    "_id": "57611fe3062fc007943bc3f7",
+    "avatar": null,
+    "userName": "vali",
+    "isReported": false,
+    "relatedUsers": [
+      {"userId": "57611fe0062fc007943bc3f5"},
+      {"userId": "57612029062fc007943bc40d"}
+    ],
+    "relatedServices": [{"serviceId": "57611fe6062fc007943bc3f9"}],
+    "relatedComments": []
+  },
+  {
+    "_id" : "57612029062fc007943bc40d",
+    "avatar": null,
+    "userName": "eva",
+    "isReported": false,
+    "relatedUsers": [
+      {"userId": "57611fe3062fc007943bc3f7"}
+    ],
+    "relatedServices": [{"serviceId": "57611fe6062fc007943bc3f9"}],
+    "relatedComments": []
+  },
+  {
+    "_id" : "576a4c8d062fc029d027092c",
+    "avatar": null,
+    "userName": "norecooper",
+    "name": "Nore Cooper",
+    "isReported": false,
+    "relatedUsers": [],
+    "relatedServices": [],
+    "relatedComments": []
+  },
+  {
+    "_id" : "576a4ddb062fc029d0270932",
+    "avatar": null,
+    "userName": "norasister",
+    "name": "Nora Sister",
+    "isReported": false,
+    "relatedUsers": [],
+    "relatedServices": [],
+    "relatedComments": []
+  }
+]}

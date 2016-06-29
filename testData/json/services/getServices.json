@@ -1,0 +1,294 @@
+{
+  "@odata.context": "https://127.0.0.1/api/$metadata#Services",
+  "value": [
+  {
+    "_id": "57611fe6062fc007943bc3f9",
+    "name": "Nail Wrap Manicure",
+    "category": "manicure",
+    "rating": 3,
+    "color": "#96FF00",
+    "address": "1 Main road, Hogsmeade",
+    "openHours": {
+      "from": "09:00:00",
+      "till": "19:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 46
+      }
+    },
+    "length": 70,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+    },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id": "57611fe9062fc007943bc3fb",
+    "name": "Signature Coco Manicure",
+    "category": "manicure",
+    "rating": 4,
+    "color": "#7D5189",
+    "address": "4 Private drive, Little Whinging",
+    "openHours": {
+      "from": "10:00:00",
+      "till": "20:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 44
+      }
+    },
+    "length": 60,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id": "57611fec062fc007943bc3fd",
+    "name": "Luxury Hot Stone Manicure",
+    "category": "manicure",
+    "rating": 2,
+    "color": "#FE93FF",
+    "address": "1 Main road, London",
+    "openHours": {
+      "from": "08:00:00",
+      "till": "19:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 44
+      }
+    },
+    "length": 70,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id": "57611ff0062fc007943bc3ff",
+    "name": "Japanese Pedicure",
+    "category": "pedicure",
+    "rating": 1,
+    "color": "#33FFDD",
+    "address": "1 Main road, Birmingham",
+    "openHours": {
+      "from": "10:00:00",
+      "till": "21:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 48
+      }
+    },
+    "length": 45,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id": "5761200f062fc007943bc401",
+    "name": "Classic Pedicure",
+    "category": "pedicure",
+    "rating": 3,
+    "color": "#11DCA3",
+    "address": "1 Main road, Manchester",
+    "openHours": {
+      "from": "10:00:00",
+      "till": "18:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 40
+      }
+    },
+    "length": 45,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id": "57612013062fc007943bc403",
+    "name": "Quickie Pedicure",
+    "category": "pedicure",
+    "rating": 5,
+    "color": "#FFFE93",
+    "address": "1 Main road, Leads",
+    "openHours": {
+      "from": "08:00:00",
+      "till": "18:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 26
+      }
+    },
+    "length": 25,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id" : "57612017062fc007943bc405",
+    "name": "Hard Gel Full Set",
+    "category": "nail enhancement",
+    "rating": 4,
+    "color": "#EBFDE3",
+    "address": "1 Main road, Glasgow",
+    "openHours": {
+      "from": "10:00:00",
+      "till": "22:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 63
+      }
+    },
+    "length": 105,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id" : "5761201b062fc007943bc407",
+    "name": "Hard Gel In-fill",
+    "category": "nail enhancement",
+    "rating": 5,
+    "color": "#FF7F50",
+    "address": "1 Main road, Liverpool",
+    "openHours": {
+      "from": "09:00:00",
+      "till": "19:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 57
+      }
+    },
+    "length": 90,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id" : "57612020062fc007943bc409",
+    "name": "Eye Lashes",
+    "category": "tinting",
+    "rating": 2,
+    "color": "#6897BB",
+    "address": "1 Main road, Sheffield",
+    "openHours": {
+      "from": "10:00:00",
+      "till": "19:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 19
+      }
+    },
+    "length": 15,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  },
+  {
+    "_id" : "57612024062fc007943bc40b",
+    "name": "Eyebrows",
+    "category": "tinting",
+    "rating": 4,
+    "color": "#BBFA9F",
+    "address": "1 Main road, Bristol",
+    "openHours": {
+      "from": "09:30:00",
+      "till": "20:00:00"
+    },
+    "isOpen": true,
+    "isDiscounted": true,
+    "price": {
+      "min": {
+        "currency": "GBP",
+        "value": 14
+      }
+    },
+    "length": 15,
+    "priceEffective": {
+        "startDate": "2016-07-03T07:16:23Z",
+        "endDate": "2016-08-03T07:16:23Z"
+        },
+    "priceIneffective": {
+        "startDate": "2016-06-03T07:16:23Z",
+        "endDate": "2016-07-03T07:16:23Z"
+    }
+  }
+]}
