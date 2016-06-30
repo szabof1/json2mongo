@@ -8,10 +8,13 @@ import {models} from "./models/index"
 
 
 export function initMongoDbDatabase (path2json: string, mapModel2Json: Object) {
+  if (!mapModel2Json) mapModel2Json = {}
+
   let conf: any = config
   mongoose.connect(conf.mongoConnection)
 
-  let n:number = 0
+  let nModelDocs:number = 0
+  let nAllDocs:number = 0
 
   async.eachSeries(Object.keys(models), processJsonFile, cleanUp)
 
@@ -38,7 +41,7 @@ export function initMongoDbDatabase (path2json: string, mapModel2Json: Object) {
       let obj: any = JSON.parse(data)
       let docs: any[] = _.get(obj, "value",[])
 
-      n = 0
+      nModelDocs = 0
       let processDocForModel = _.curry(processDoc)(model)
       let summaryForModel = _.curryRight(summary)(modelName)
       async.eachSeries(docs, processDocForModel, summaryForModel)
@@ -46,15 +49,32 @@ export function initMongoDbDatabase (path2json: string, mapModel2Json: Object) {
 
 
     function processDoc(model:any, doc:any, cbDoc:Function) {
-      // TODO: check if the document exist, if yes then replace it (do an upsert)
+      // Create Model instance,
+      // this way Mongoose converts data from simple types (eg. strings to ObjectIds or Dates)
       let docToAdd = new model(doc)
-      docToAdd.save(function(err:any){
+
+      // The method for doing upsert comes from Clint Harris' answer
+      // on Stackoverflow.com
+      // http://stackoverflow.com/questions/7267102/how-do-i-update-upsert-a-document-in-mongoose
+
+      // Convert the Model instance to a simple object using Model's 'toObject' function
+      // to prevent weirdness like infinite looping...
+      var upsertDoc = docToAdd.toObject()
+
+      // Delete the _id property, otherwise Mongo will return a "Mod on _id not allowed" error
+      delete upsertDoc._id
+
+      // Do the upsert, which works like this: If no Contact document exists with
+      // _id = contact.id, then create a new doc using upsertData.
+      // Otherwise, update the existing doc with upsertData
+      model.update({_id: docToAdd._id}, upsertDoc, {upsert: true}, function(err:any, result:any) {
         if(err) {
-          console.error("ERROR saving doc: ", err)
+          console.error("    ERROR saving doc: ", err)
           return cbDoc(err)
         }
-        console.log(`Item added {_id: '${docToAdd._id}'}`)
-        n++
+        console.log(`    Item upserted {_id: '${docToAdd._id}'}`)
+        //console.log('      ', result, result.nModified)
+        if (_.has(result, 'upserted')) nModelDocs += result.upserted.length
         return cbDoc(null)
       })
 
@@ -63,9 +83,11 @@ export function initMongoDbDatabase (path2json: string, mapModel2Json: Object) {
 
     function summary(err:any, modelName:string) {
       if (err) {
-        console.error(`ERROR after processing model '${modelName}':`, err)
+        console.error(`  ERROR after processing model '${modelName}':`, err)
       }
-      console.log(`Number of '${modelName}' documents inserted: ${n}`)
+      console.log(`  Number of '${modelName}' documents upserted: ${nModelDocs}`)
+
+      nAllDocs += nModelDocs
 
       return cbJson(null)
     }
@@ -74,6 +96,7 @@ export function initMongoDbDatabase (path2json: string, mapModel2Json: Object) {
 
 
   function cleanUp() {
+    console.log(`Number of documents upserted: ${nAllDocs}`)
     console.log("FINISHED")
     mongoose.disconnect
     process.exit(0)
